@@ -22,7 +22,7 @@ export async function getUserById(params: GetUserByIdParams) {
     return user;
   } catch (error) {
     console.log(error);
-    throw new Error("Error fetching user", error);
+    throw new Error("Error fetching user" + error);
   }
 }
 
@@ -35,7 +35,7 @@ export async function createUser(userData: CreateUserParams) {
     return newUser;
   } catch (error) {
     console.log(error);
-    throw new Error("Error fetching user", error);
+    throw new Error("Error fetching user" + error);
   }
 }
 
@@ -52,7 +52,7 @@ export async function updateUser(params: UpdateUserParams) {
     revalidatePath(path);
   } catch (error) {
     console.log(error);
-    throw new Error("Error fetching user", error);
+    throw new Error("Error fetching user" + error);
   }
 }
 
@@ -84,6 +84,6 @@ export async function deleteUser(params: DeleteUserParams) {
     return deletedUser;
   } catch (error) {
     console.log(error);
-    throw new Error("Error fetching user", error);
+    throw new Error("Error fetching user" + error);
   }
 }
